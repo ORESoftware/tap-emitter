@@ -1,0 +1,38 @@
+{
+  "name": "tap-emitter",
+  "version": "0.0.0",
+  "description": "My premium module",
+  "license": "MIT",
+  "repository": "jamestalmage/tap-emitter",
+  "author": {
+    "name": "James Talmage",
+    "email": "james@talmage.io",
+    "url": "github.com/jamestalmage"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "tap": "tap --reporter=tap tap/*.js || echo ''",
+    "spec": "node index.js | tap-mocha-reporter spec || echo ''",
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js",
+    "lib/*.js"
+  ],
+  "keywords": [
+    ""
+  ],
+  "dependencies": {
+    "clean-yaml-object": "^0.1.0",
+    "js-yaml": "^3.4.6",
+    "stack-utils": "^0.3.0"
+  },
+  "devDependencies": {
+    "ava": "^0.8.0",
+    "tap": "^4.0.0",
+    "tap-mocha-reporter": "0.0.22",
+    "xo": "^0.12.1"
+  }
+}
