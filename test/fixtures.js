@@ -106,5 +106,6 @@ runTest('giving-up');
 runTest('got-spare-tuits');
 runTest('head_end');
 runTest('head_fail');
+runTest('implicit-counter', {id: false});
 
 runTest('simple_yaml');
