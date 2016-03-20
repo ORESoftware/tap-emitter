@@ -101,5 +101,6 @@ runTest('empty');
 runTest('escape_eol');
 runTest('escape_hash');
 runTest('extra-in-child');
+runTest('garbage-yamlish');
 
 runTest('simple_yaml');

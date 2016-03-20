@@ -1,0 +1,6 @@
+TAP version 13
+not ok 1 - de-indenting the yamlish wrongly.
+ok 2 - But this is not garbage
+not ok 3 - truncating the yamlish
+not ok 4 - this is truncated weirdly
+1..4
