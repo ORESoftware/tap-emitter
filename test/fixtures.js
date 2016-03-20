@@ -90,5 +90,6 @@ runTest('comment-mid-diag-postplan');
 runTest('common-with-explanation');
 runTest('creative-liberties');
 runTest('delayed');
+runTest('descriptive');
 
 runTest('simple_yaml');
