@@ -89,5 +89,6 @@ runTest('comment-mid-diag');
 runTest('comment-mid-diag-postplan');
 runTest('common-with-explanation');
 runTest('creative-liberties');
+runTest('delayed');
 
 runTest('simple_yaml');
