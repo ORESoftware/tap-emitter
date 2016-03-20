@@ -1,0 +1,34 @@
+TAP version 13
+    # Subtest: index.js
+    TAP version 13
+        # Subtest: boom
+            # Subtest: npm install package line
+        1..0
+    # package - Easy package.json exports.
+    # # Intro
+    # # Installation
+    # # Usage
+    # # Contribution
+    # # Other similar modules
+    # # License
+    ok 1 - boom # time=5.26ms
+    1..1
+    # time=12.555ms
+not ok 1 - index.js # time=201.609ms
+  ---
+  arguments:
+    - index.js
+  timeout: 30000
+  results:
+    ok: false
+    count: 1
+    pass: 1
+    plan:
+      start: 1
+      end: 1
+  command: /usr/local/bin/iojs
+  file: index.js
+  ...
+1..1
+# failed 1 of 1 tests
+# time=209.666ms
