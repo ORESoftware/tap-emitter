@@ -32,6 +32,7 @@
   "devDependencies": {
     "array-to-events": "^1.0.0",
     "ava": "^0.13.0",
+    "disparity": "^2.0.0",
     "tap": "^4.0.0",
     "tap-mocha-reporter": "0.0.22",
     "xo": "^0.12.1"

@@ -3,6 +3,7 @@ import path from 'path';
 import fs from 'fs';
 import atoe from 'array-to-events';
 import Messages from '../lib/messages';
+import disparity from 'disparity';
 
 import {EventEmitter} from 'events';
 
@@ -67,6 +68,9 @@ function runTest(name, opts) {
 
 		if (opts.debug) {
 			console.log(output);
+			if (output !== expected) {
+				console.log(disparity.unified(expected, output));
+			}
 		} else {
 			t.is(output, expected);
 		}
@@ -84,5 +88,6 @@ runTest('combined_compat');
 runTest('comment-mid-diag');
 runTest('comment-mid-diag-postplan');
 runTest('common-with-explanation');
+runTest('creative-liberties');
 
 runTest('simple_yaml');
