@@ -1,0 +1,17 @@
+TAP version 13
+    # Subtest: test/01c-user-updates.js
+    TAP version 13
+        # Subtest: update profile
+        ok 1 - should be equivalent
+        ok 2 - should be equivalent
+        1..2
+    ok 1 - update profile # time=43.094ms
+        # Subtest: update email
+        ok 1 - should be equivalent
+        1..1
+    ok 2 - update email # time=24.16ms
+    1..2
+    # time=174.236ms
+ok 1 - test/01c-user-updates.js # time=339.14ms
+1..1
+# time=343.487ms

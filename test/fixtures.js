@@ -100,5 +100,6 @@ runTest('echo');
 runTest('empty');
 runTest('escape_eol');
 runTest('escape_hash');
+runTest('extra-in-child');
 
 runTest('simple_yaml');
