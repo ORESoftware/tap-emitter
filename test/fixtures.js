@@ -81,5 +81,6 @@ runTest('broken-yamlish-looks-like-child');
 runTest('child-extra');
 runTest('combined');
 runTest('combined_compat');
+runTest('comment-mid-diag');
 
 runTest('simple_yaml');
