@@ -92,5 +92,11 @@ runTest('creative-liberties');
 runTest('delayed');
 runTest('descriptive');
 runTest('descriptive_trailing');
+runTest('die_head_end');
+runTest('die_last_minute');
+runTest('die_unfinished');
+runTest('duplicates');
+runTest('echo');
+runTest('empty');
 
 runTest('simple_yaml');
