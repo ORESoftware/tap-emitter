@@ -26,7 +26,7 @@ function processEvents(events, lines, indent, opts) {
 	ee.on('version', () => lines.push(messages.version()));
 	ee.on('plan', plan => lines.push(messages.plan(plan.end)));
 	ee.on('bailout', message => lines.push(messages.bailout(message)));
-	ee.on('comment', comment => lines.push(messages.diagnostic(comment.replace(/\n$/, '').replace(/^\s*#\s+/, ''))));
+	ee.on('comment', comment => lines.push(messages.diagnostic(comment.replace(/\n$/, '').replace(/^\s*#\s*/, ''))));
 	ee.on('child', events => processEvents(events, lines, indent + 4, opts));
 	ee.on('assert', assert => {
 		const def = {
@@ -83,5 +83,6 @@ runTest('combined');
 runTest('combined_compat');
 runTest('comment-mid-diag');
 runTest('comment-mid-diag-postplan');
+runTest('common-with-explanation');
 
 runTest('simple_yaml');
