@@ -1,0 +1,12 @@
+TAP version 13
+    # Subtest: test/debug-test.js
+    TAP version 13
+    # debug test
+    ok 1 - Should output debugger message
+    1..1
+    # tests 1
+    # pass  1
+    # ok
+ok 1 - test/debug-test.js # time=537.383ms
+1..1
+# time=543.783ms
