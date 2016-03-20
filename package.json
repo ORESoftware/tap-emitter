@@ -30,7 +30,8 @@
     "stack-utils": "^0.3.0"
   },
   "devDependencies": {
-    "ava": "^0.8.0",
+    "array-to-events": "^1.0.0",
+    "ava": "^0.13.0",
     "tap": "^4.0.0",
     "tap-mocha-reporter": "0.0.22",
     "xo": "^0.12.1"
