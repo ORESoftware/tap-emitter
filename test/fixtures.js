@@ -36,7 +36,7 @@ function runTest(name, opts) {
 			const def = {
 				ok: assert.ok
 			};
-			if (opts.id) {
+			if (opts.id !== false) {
 				def.testNumber = assert.id;
 			}
 			lines.push(messages.test(def));
@@ -57,8 +57,8 @@ function runTest(name, opts) {
 	});
 }
 
-runTest('basic');
-runTest('bailout', {id: true});
-runTest('bignum', {id: true});
-runTest('bignum_many', {id: true});
-runTest('simple_yaml', {id: true});
+runTest('bailout');
+runTest('basic', {id: false});
+runTest('bignum');
+runTest('bignum_many');
+runTest('simple_yaml');
