@@ -39,6 +39,12 @@ function processEvents(events, lines, indent, opts) {
 		if (assert.time) {
 			def.directive = 'time=' + assert.time + 'ms';
 		}
+		if (assert.skip) {
+			def.directive = 'Skip ' + assert.skip;
+		}
+		if (assert.todo) {
+			def.directive = assert.todo === true ? 'TODO' : 'TODO ' + assert.todo;
+		}
 		lines.push(messages.test(def));
 		if (assert.diag) {
 			lines.push(messages.yaml(assert.diag));
@@ -73,5 +79,6 @@ runTest('bignum');
 runTest('bignum_many');
 runTest('broken-yamlish-looks-like-child');
 runTest('child-extra');
+runTest('combined');
 
 runTest('simple_yaml');
