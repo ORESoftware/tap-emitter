@@ -109,5 +109,6 @@ runTest('head_fail');
 runTest('implicit-counter', {id: false});
 runTest('indent');
 runTest('indented-stdout-noise');
+runTest('junk_before_plan');
 
 runTest('simple_yaml');
