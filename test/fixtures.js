@@ -103,5 +103,8 @@ runTest('escape_hash');
 runTest('extra-in-child');
 runTest('garbage-yamlish');
 runTest('giving-up');
+runTest('got-spare-tuits');
+runTest('head_end');
+runTest('head_fail');
 
 runTest('simple_yaml');
