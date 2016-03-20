@@ -99,5 +99,6 @@ runTest('duplicates');
 runTest('echo');
 runTest('empty');
 runTest('escape_eol');
+runTest('escape_hash');
 
 runTest('simple_yaml');
