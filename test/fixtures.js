@@ -91,5 +91,6 @@ runTest('common-with-explanation');
 runTest('creative-liberties');
 runTest('delayed');
 runTest('descriptive');
+runTest('descriptive_trailing');
 
 runTest('simple_yaml');
