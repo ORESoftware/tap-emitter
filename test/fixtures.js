@@ -98,5 +98,6 @@ runTest('die_unfinished');
 runTest('duplicates');
 runTest('echo');
 runTest('empty');
+runTest('escape_eol');
 
 runTest('simple_yaml');
