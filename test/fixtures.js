@@ -82,5 +82,6 @@ runTest('child-extra');
 runTest('combined');
 runTest('combined_compat');
 runTest('comment-mid-diag');
+runTest('comment-mid-diag-postplan');
 
 runTest('simple_yaml');
