@@ -10,18 +10,28 @@ function loadFixture(name) {
 	return fs.readFileSync(path.join(__dirname, 'fixtures', name), 'utf8');
 }
 
+function tryLoad(...args) {
+	for (var i = 0; i < args.length; i++) {
+		try {
+			return loadFixture(args[i]);
+		} catch (e) {}
+	}
+	throw new Error('found none of these: ' + args.join(', '));
+}
+
 function runTest(name, opts) {
 	opts = opts || {};
 
 	(opts.debug ? test.only : test)(name, t => {
 		const events = JSON.parse(loadFixture(name + '.json'));
-		const expected = loadFixture(name + '.tap').trim();
+		const expected = tryLoad(name + '.tap-out', name + '.tap').trim();
 		const ee = new EventEmitter();
 		const lines = [];
 		const messages = new Messages(13, 0);
 
 		ee.on('version', () => lines.push(messages.version()));
 		ee.on('plan', plan => lines.push(messages.plan(plan.end)));
+		ee.on('bailout', message => lines.push(messages.bailout(message)));
 		ee.on('assert', assert => {
 			const def = {
 				ok: assert.ok
@@ -48,6 +58,7 @@ function runTest(name, opts) {
 }
 
 runTest('basic');
+runTest('bailout', {id: true});
 runTest('bignum', {id: true});
 runTest('bignum_many', {id: true});
-// runTest('simple_yaml', {id: true});
+runTest('simple_yaml', {id: true});
