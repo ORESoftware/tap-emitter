@@ -34,7 +34,8 @@ function runTest(name, opts) {
 		ee.on('bailout', message => lines.push(messages.bailout(message)));
 		ee.on('assert', assert => {
 			const def = {
-				ok: assert.ok
+				ok: assert.ok,
+				description: assert.name
 			};
 			if (opts.id !== false) {
 				def.testNumber = assert.id;
@@ -61,4 +62,6 @@ runTest('bailout');
 runTest('basic', {id: false});
 runTest('bignum');
 runTest('bignum_many');
+runTest('broken-yamlish-looks-like-child');
+
 runTest('simple_yaml');

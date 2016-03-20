@@ -1,0 +1,4 @@
+1..3
+ok 1 - callback happened
+ok 2 - child test
+ok 3 - should come last
