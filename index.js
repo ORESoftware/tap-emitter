@@ -1,7 +1,6 @@
 'use strict';
-
-var Messages = require('./lib/messages');
 var stack = require('stack-utils');
+var Messages = require('./lib/messages');
 
 var m = new Messages(13, 0);
 

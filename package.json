@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "My premium module",
   "license": "MIT",
-  "repository": "jamestalmage/tap-emitter",
+  "repository": "avajs/tap-emitter",
   "author": {
     "name": "James Talmage",
     "email": "james@talmage.io",
@@ -22,7 +22,8 @@
     "lib/*.js"
   ],
   "keywords": [
-    ""
+    "tap",
+    "emitter"
   ],
   "dependencies": {
     "clean-yaml-object": "^0.1.0",
@@ -35,6 +36,6 @@
     "disparity": "^2.0.0",
     "tap": "^5.7.0",
     "tap-mocha-reporter": "0.0.24",
-    "xo": "^0.13.0"
+    "xo": "^0.15.1"
   }
 }

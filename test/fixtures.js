@@ -1,11 +1,10 @@
-import test from 'ava';
 import path from 'path';
-import fs from 'fs';
-import atoe from 'array-to-events';
-import Messages from '../lib/messages';
-import disparity from 'disparity';
-
 import {EventEmitter} from 'events';
+import fs from 'fs';
+import test from 'ava';
+import atoe from 'array-to-events';
+import disparity from 'disparity';
+import Messages from '../lib/messages';
 
 function loadFixture(name) {
 	return fs.readFileSync(path.join(__dirname, 'fixtures', name), 'utf8');
@@ -15,8 +14,9 @@ function tryLoad(...args) {
 	for (var i = 0; i < args.length; i++) {
 		try {
 			return loadFixture(args[i]);
-		} catch (e) {}
+		} catch (err) {}
 	}
+
 	throw new Error('found none of these: ' + args.join(', '));
 }
 
@@ -34,19 +34,25 @@ function processEvents(events, lines, indent, opts) {
 			ok: assert.ok,
 			description: assert.name
 		};
+
 		if (opts.id !== false) {
 			def.testNumber = assert.id;
 		}
+
 		if (assert.time) {
 			def.directive = 'time=' + assert.time + 'ms';
 		}
+
 		if (assert.skip) {
 			def.directive = 'Skip ' + assert.skip;
 		}
+
 		if (assert.todo) {
 			def.directive = assert.todo === true ? 'TODO' : 'TODO ' + assert.todo;
 		}
+
 		lines.push(messages.test(def));
+
 		if (assert.diag) {
 			lines.push(messages.yaml(assert.diag));
 		}
@@ -68,6 +74,7 @@ function runTest(name, opts) {
 
 		if (opts.debug) {
 			console.log(output);
+
 			if (output !== expected) {
 				console.log(disparity.unified(expected, output));
 			}
@@ -111,5 +118,4 @@ runTest('indent');
 runTest('indented-stdout-noise');
 runTest('junk_before_plan');
 runTest('line-break');
-
 runTest('simple_yaml');
